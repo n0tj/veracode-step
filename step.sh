@@ -113,6 +113,6 @@ if [ ! -z "${file_upload_path}" ] ; then
     echo echo_info "Beginning Prescan on Veracode..."
     echo_details "action -beginprescan"
     echo
-    java -jar $BITRISE_STEP_SOURCE_DIR/Veracode/API.jar -vid ${veracode_api_id} -vkey ${veracode_api_secret} -action beginprescan -appid ${veracode_app_id} -autoscan ${auto_scan}
+    java -jar $BITRISE_STEP_SOURCE_DIR/Veracode/API.jar -vid ${veracode_api_id} -vkey ${veracode_api_secret} -action beginprescan -appid ${veracode_app_id} -autoscan ${auto_scan} -selectedpreviously true -criticality Medium
     echo_done "Success"
 fi
